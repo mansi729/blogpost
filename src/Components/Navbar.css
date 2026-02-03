@@ -1,0 +1,78 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.nav {
+  height: 60px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  padding: 0 20px;
+  transition: background-color 0.3s ease;
+
+  background-color: rgb(186, 149, 255);
+}
+
+.title {
+  font-size: 24px;
+  justify-self: start;
+  color: rgb(0, 0, 0);
+}
+
+.menubar {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+
+.menubar a {
+  text-decoration: none;
+  font-size: 16px;
+  color: rgb(10, 10, 10);
+}
+
+.active-link {
+  font-weight: bold;
+  border-bottom: 2px solid white;
+}
+
+.right-section {
+  display: flex;           
+  align-items: center;     
+  gap: 15px;              
+  justify-self: end;
+}
+
+.profile-logo-circle {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+/* --- Dark Mode Overrides --- */
+
+.nav.dark {
+  background-color: #41306e; 
+}
+
+.nav.dark .title,
+.nav.dark .menubar a,
+.nav.dark .theme-toggle,
+.nav.dark .profile-logo-circle {
+  color: #ffffff;
+  border-color: #ffffff; 
+}
+
+.nav.dark .menubar a:hover {
+  color: #d1c4e9;
+}

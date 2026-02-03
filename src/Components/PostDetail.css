@@ -1,0 +1,101 @@
+/* --- Base Styles (Light Mode) --- */
+.post-detail {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  background: #f6efff; /* App background સાથે મેચ */
+  width: 100%;
+  min-height: 100vh;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.post-card {
+  display: flex;
+  gap: 20px;
+  background:#5a4a8a; /* Your main light purple */
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.post-image {
+  width: 370px;
+  height: 270px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.post-content h2 {
+  margin: 0 0 10px 0;
+  font-size: 24px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}
+
+.post-content p {
+  flex: 1; 
+  font-size: 16px;
+  color: #e0e0e0;
+  margin-bottom: 20px;
+}
+
+.post-actions {
+  display: flex;
+  justify-content: flex-end; 
+  gap: 10px;
+}
+
+.btn {
+  padding: 6px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn.edit {
+  background-color: rgb(186, 149, 255);
+  color: #050505;
+  width: 80px;
+}
+
+.btn.delete {
+  background-color: #ef4444;
+  color: #fff;
+  width: 80px;
+}
+
+/* --- Dark Mode Styles --- */
+
+/* જ્યારે post-detail પર .dark ક્લાસ લાગે ત્યારે */
+.post-detail.dark {
+  background: #765FB0; /* Darker background */
+}
+
+.post-detail.dark .post-card {
+  background: rgb(186, 149, 255) ; /* Dark Card color */
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+}
+
+.post-detail.dark h2,
+.post-detail.dark p {
+  color: #000000; /* Dark mode font color */
+}
+
+/* ડાર્ક મોડમાં બટનનો કલર (વૈકલ્પિક: જો તમારે લાઈટ રાખવા હોય તો) */
+.post-detail.dark .btn.edit {
+  background-color: rgb(71, 42, 99);
+  color: #ffffff;
+  font-weight: bold;
+}
